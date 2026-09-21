@@ -57,10 +57,11 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
- //スクロールを1/5倍速にする
+
+        //スクロールを1/5倍速にする
     };
 };
 
@@ -167,16 +168,18 @@
 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT                      &kp C_BRIGHTNESS_DEC  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp K_MUTE        &kp C_VOL_DN
 &kp EQUAL     &trans        &trans        &trans        &trans     &trans    &trans  &trans                                      &trans                &trans            &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         //4
 
         FUNCTION {
             bindings = <
-&kp LA(LC(E))  &kp LA(LC(R))  &kp LA(LC(T))  &kp LA(LC(U))  &kp F5                           &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans  &trans
-&kp LA(LC(D))  &kp LA(LC(F))  &kp LA(LC(G))  &kp LA(LC(J))  &kp LA(LC(K))                    &trans           &trans       &trans  &trans  &trans
-&trans         &trans         &trans         &kp F11        &kp F12                          &kp C_MUTE       &trans       &trans  &trans  &trans
-&trans         &trans         &trans         &trans         &trans         &trans    &trans  &trans                        &trans  &trans  &trans
+&kp LA(LC(E))  &kp LA(LC(R))  &kp LA(LC(T))  &kp LA(LC(U))  &kp LA(LC(F5))                    &kp LC(LS(TAB))    &kp LC(TAB)  &trans  &trans  &trans
+&kp LA(LC(D))  &kp LA(LC(F))  &kp LA(LC(G))  &kp LA(LC(J))  &kp LA(LC(K))                     &trans             &trans       &trans  &trans  &trans
+&trans         &trans         &trans         &kp F11        &kp F12                           &kp LA(LC(EQUAL))  &trans       &trans  &trans  &trans
+&trans         &trans         &trans         &trans         &trans          &trans    &trans  &trans                          &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
