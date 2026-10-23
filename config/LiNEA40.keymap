@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,
+            //スクロール方向を逆転,,,,,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
 
@@ -150,10 +150,10 @@
 
         MARK {
             bindings = <
-&kp F1        &kp F2            &kp F3             &kp F4                &kp F5                          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-&kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4          &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS                       &kp EQUAL     &kp INT_YEN   &kp DOLLAR    &kp F11       &kp LS(F12)
-&trans        &trans            &trans             &trans                &trans        &trans    &trans  &trans                      &trans        &trans        &trans
+&kp F1        &kp F2            &kp F3             &kp F4                &kp F5                          &kp F6        &kp F7        &kp F8        &kp F9           &kp F10
+&kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3       &kp NUMBER_4          &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
+&kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS                       &kp EQUAL     &kp INT_YEN   &kp DOLLAR    &kp LS(LC(TAB))  &kp LC(TAB)
+&trans        &trans            &trans             &trans                &trans        &trans    &trans  &trans                      &trans        &trans           &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -163,10 +163,10 @@
 
         CURSOR {
             bindings = <
-&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK                    &kp LC(LEFT_ARROW)    &kp LEFT_ARROW        &kp UP_ARROW          &kp RIGHT_ARROW   &kp LC(RIGHT_ARROW)
-&kp KP_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH                    &kp C_BRI_INC         &kp LC(DOWN_ARROW)    &kp DOWN_ARROW        &kp LC(UP_ARROW)  &kp C_VOLUME_UP
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT                      &kp C_BRIGHTNESS_DEC  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp K_MUTE        &kp C_VOL_DN
-&kp EQUAL     &trans        &trans        &trans        &trans     &trans    &trans  &trans                                      &trans                &trans            &trans
+&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK                    &kp LC(LEFT_ARROW)    &kp LEFT_ARROW        &kp UP_ARROW    &kp RIGHT_ARROW   &kp LC(RIGHT_ARROW)
+&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH                    &kp LG(MINUS)         &kp LC(DOWN_ARROW)    &kp DOWN_ARROW  &kp LC(UP_ARROW)  &kp LG(PLUS)
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT                      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_MUTE      &kp C_VOL_DN      &kp C_VOLUME_UP
+&kp EQUAL     &trans        &trans        &trans        &trans     &trans    &trans  &trans                                      &trans          &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
