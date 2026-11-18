@@ -70,5 +70,3 @@
     device = <&trackball>;
     input-processors = <&zip_xy_scaler 4 3>; 
 };
-
-};
