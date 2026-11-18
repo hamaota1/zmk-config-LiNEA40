@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>,
             <&zip_wheel_scaler 1 4>;
 
@@ -89,21 +89,6 @@
             key-positions = <6 7>;
         };
 
-        RightClick {
-            bindings = <&mkp MB2>;
-            key-positions = <18 17>;
-        };
-
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <27 28>;
-        };
-
-        ClickNext {
-            bindings = <&mkp MB5>;
-            key-positions = <26 27>;
-        };
-
         Increase {
             bindings = <&kp LG(PLUS)>;
             key-positions = <8 9>;
@@ -112,6 +97,16 @@
         Decrease {
             bindings = <&kp LG(MINUS)>;
             key-positions = <7 8>;
+        };
+
+        Ctl+Tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <19 18>;
+        };
+
+        BackTab {
+            bindings = <&kp LS(LC(TAB))>;
+            key-positions = <17 18>;
         };
     };
 
