@@ -59,7 +59,7 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
 
         /* ここを変更（一般的な値: 400, 800, 1200, 1600など） */
-        cpi = <600>;
+        res-cpi = <600>;
         
         automouse-layer = <1>;
         snipe-layers = <2>;
